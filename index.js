@@ -33,6 +33,11 @@ const promptQuestions = [
     },
     {
         type: 'input',
+        name: 'installation',
+        message: 'Please provide step-by-step installation instructions for your project. (Required)',
+    },
+    {
+        type: 'input',
         name: 'how',
         message: 'How will someone use this? (Required)',
     },
@@ -57,7 +62,33 @@ const promptQuestions = [
         type: 'input',
         name: 'test',
         message: 'Please provide instructions on how to test the app. (Required)',
-    }
+    },
+    {
+        type: 'confirm',
+        name: 'confirmContributers',
+        message: 'Would you like to allow other developers to contribute?',
+        default: true
+    },
+    {
+        type: 'input',
+        name: 'contribute',
+        message: 'Please provide guidelines for contributing. (Required)',
+        when: ({ confirmContributers }) => {
+            if (confirmContributers) {
+                return true;
+            } else {
+                return false;
+            }
+        },
+        validate: contributerInput => {
+            if (contributerInput) {
+                return true;
+            } else {
+                console.log('Please enter contributer guidelines!');
+                return false;
+            }
+        }
+    },
 
 ];
 

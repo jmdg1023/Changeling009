@@ -56,22 +56,22 @@ function generateMarkdown(data) {
   ${data.titleDescription}
   
   ${renderLicenseBadge(data.license)}
-  ## Table-of-Contents
-  * [Installation](#install)
+  ## Table of Contents
+  * [Installation](#installation)
   * [How is this project used?](#how)
   * [What this project does](#What)
   * [Learning Resources](#learning)
   
 
-  *  ${renderLicenseTOC(data.license)}
+  ${renderLicenseTOC(data.license)}
   * [Contributing](#contributing)
   * [Tests](#tests)
   * [Questions](#questions)
  
-  ## [How is this installed?(#install)
-  ${data.install}
+  ## [How is this installed?](#installation)
+  ${data.installation}
 
-  ## [How is this project used?(#how)
+  ## [How is this project used?](#how)
   ${data.how}
   
   ## [What this project does](#What)
@@ -92,7 +92,7 @@ function generateMarkdown(data) {
   ${data.test}
   ## [Questions](#table-of-contents)
   Please contact me using the following links:
-  [GitHub](https://github.com/${data.githubUsername})
+  [GitHub](https://github.com/${data.githubUsername}) or
   [Email: ${data.email}](mailto:${data.email})
 `;
 }
