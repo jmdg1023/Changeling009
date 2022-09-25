@@ -16,7 +16,7 @@ const promptQuestions = [
 
         type: 'input',
         name: 'titleDescription',
-        message: 'Title short desctiption: (Required)',
+        message: 'Project desctiption: (Required)',
 
     },
     {
@@ -44,15 +44,20 @@ const promptQuestions = [
     {
         type: 'list',
         name: 'license',
-        message: 'Which license will you use for your project?',
+        message: 'Which license will you use for your project?(Required)',
         choices: ['agpl', 'apache', 'mit', 'no license']
     },
     {
         type: 'input',
         name: 'learning',
-        message: 'Type in link/s for learning resources',
+        message: 'Type in link/s for learning resources(Required)',
 
     },
+    {
+        type: 'input',
+        name: 'test',
+        message: 'Please provide instructions on how to test the app. (Required)',
+    }
 
 ];
 

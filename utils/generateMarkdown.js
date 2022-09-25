@@ -57,10 +57,20 @@ function generateMarkdown(data) {
   
   ${renderLicenseBadge(data.license)}
   ## Table-of-Contents
-  * [Description](#description)
-  * [Installation](#installation)
+  * [Installation](#install)
+  * [How is this project used?](#how)
+  * [What this project does](#What)
   * [Learning Resources](#learning)
+  
+
+  *  ${renderLicenseTOC(data.license)}
+  * [Contributing](#contributing)
+  * [Tests](#tests)
+  * [Questions](#questions)
  
+  ## [How is this installed?(#install)
+  ${data.install}
+
   ## [How is this project used?(#how)
   ${data.how}
   
@@ -101,8 +111,3 @@ function renderContributingSection(confirmContributers, data) {
 }
 
 module.exports = generateMarkdown;
-
-// ${renderLicenseTOC(data.license)}
-// * [Contributing](#contributing)
-// * [Tests](#tests)
-// * [Questions](#questions)
