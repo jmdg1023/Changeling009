@@ -1,38 +1,5 @@
-// // TODO: Create a function that returns a license badge based on which license is passed in
-// // If there is no license, return an empty string
-// function renderLicenseBadge(license) {}
 
-// // TODO: Create a function that returns the license link
-// // If there is no license, return an empty string
-// function renderLicenseLink(license) {}
-
-// // TODO: Create a function that returns the license section of README
-// // If there is no license, return an empty string
-// function renderLicenseSection(license) {}
-
-// // TODO: Create a function to generate markdown for README
-// function generateMarkdown(data) {
-//   return `# ${data.title}
-
-// `;
-// }
-
-// module.exports = generateMarkdown;
-
-//function to return a message if user doesn't want contributors
-function renderContributingSection(confirmContributers, data) {
-  if (!confirmContributers) {
-    return `
-  Thank you for your interest in helping out; however, I will not be accepting contributions from third parties.
-    `;
-  } else {
-    return `
-  ${data}
-    `;
-  }
-}
-
-// Function that returns a license badge based on which license is passed in
+// TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
 function renderLicenseBadge(license) {
   if (license !== 'no license') {
@@ -44,7 +11,7 @@ function renderLicenseBadge(license) {
   }
 }
 
-// Function that returns the license link
+// TODO: Create a Function that returns the license link
 // If there is no license, return an empty string
 function renderLicenseLink(license) {
   if (license !== 'no license') {
@@ -56,7 +23,7 @@ function renderLicenseLink(license) {
   }
 }
 
-// Function that returns the license section of README
+// TODO: Create a Function that returns the license section of README
 // If there is no license, return an empty string
 function renderLicenseSection(license) {
   if (license !== 'no license') {
@@ -86,25 +53,22 @@ function renderLicenseTOC(license) {
 function generateMarkdown(data) {
   return `
   # ${data.title}
+  ${data.titleDescription}
   
   ${renderLicenseBadge(data.license)}
   ## Table-of-Contents
   * [Description](#description)
   * [Installation](#installation)
-  * [Usage](#usage)
-  ${renderLicenseTOC(data.license)}
-  * [Contributing](#contributing)
-  * [Tests](#tests)
-  * [Questions](#questions)
-  
-  ## [Description](#table-of-contents)
-  ${data.what}
-  ${data.why}
+  * [Learning Resources](#learning)
+ 
+  ## [How is this project used?(#how)
   ${data.how}
-  ## [Installation](#table-of-contents)
-  ${data.installation}
-  ## [Usage](#table-of-contents)
-  ${data.usage}
+  
+  ## [What this project does](#What)
+  ${data.what}
+
+  ## [Learning Resources Links](#learning)
+  ${data.learning}
   
   For more information on how to add screenshots for examples, visit the following website:
   
@@ -123,4 +87,22 @@ function generateMarkdown(data) {
 `;
 }
 
+// Function to return a message if user doesn't want contributors
+function renderContributingSection(confirmContributers, data) {
+  if (!confirmContributers) {
+    return `
+  Thank you for your interest in helping out; however, I will not be accepting contributions from third parties.
+    `;
+  } else {
+    return `
+  ${data}
+    `;
+  }
+}
+
 module.exports = generateMarkdown;
+
+// ${renderLicenseTOC(data.license)}
+// * [Contributing](#contributing)
+// * [Tests](#tests)
+// * [Questions](#questions)
