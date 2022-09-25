@@ -46,7 +46,7 @@ function promptQuestions() {
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
 
-    fs.writeToFile('README.md', 'Hello!')
+    fs.writeFile('README.md', 'Hello!')
 }
 
 writeToFile();
