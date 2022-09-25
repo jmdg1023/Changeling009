@@ -19,7 +19,7 @@
 
 // module.exports = generateMarkdown;
 
-/ Function to return a message if user doesn't want contributors
+//function to return a message if user doesn't want contributors
 function renderContributingSection(confirmContributers, data) {
   if (!confirmContributers) {
     return `

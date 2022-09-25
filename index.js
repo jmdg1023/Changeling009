@@ -179,7 +179,7 @@ function promptQuestions() {
 
 const init = () => {
 
-    return inquirer.prompt(questions)
+    return inquirer.prompt(promptQuestions)
         .then(readmeData => {
             return readmeData;
         })
